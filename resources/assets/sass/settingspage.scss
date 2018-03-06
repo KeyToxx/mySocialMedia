@@ -1,0 +1,180 @@
+$primary-color: #DD5E5C;
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+// html
+// {
+// 	-moz-user-select: -moz-none;
+//     -webkit-user-select: none;
+//     -khtml-user-select: none;
+//     -o-user-select: none;
+//     user-select: none;
+// }
+
+//MIXINS
+
+@mixin dark-overlay
+{
+	&:hover
+	{
+		content: "+";
+		background: rgba(0, 0, 0, 0.75);
+		z-index: 9999;
+		position: absolute;
+	}
+}
+
+@mixin hover-button
+{	
+	&:hover
+	{
+		background: $primary-color;
+		cursor: pointer;
+	}
+}
+
+body
+{
+  background: #333;
+	color: #fff;
+	font-family: 'Raleway';
+	max-width: 100%;
+	box-sizing: border-box;
+
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img#banner
+{
+	height: 200px;
+	max-width: 100%;
+}
+
+// Banner and Logo
+
+header
+{
+	text-align: center;
+	background: #fff;
+	height: 200px;
+
+	.container-banner, .container-logo
+	{
+		position: relative;
+	}
+
+	#banner
+	{
+		position: absolute;
+		left: 0;
+	}
+	
+	.container-logo
+	{
+		
+		#logo
+		{
+			position: static;
+			margin-top: 70px;
+			border: 3px solid #000;
+			border-radius: 50%;
+		}
+
+	}
+
+
+}//header
+
+////////////////////////////////////////
+
+//DATAFORM
+
+.container-form
+{
+	position: relative;
+	top: 200px;
+	padding: 0 3%;
+
+	.left-form
+	{
+		width: 50%;
+		display: inline-block;
+	}
+
+	.right-form
+	{
+		width: 49.7%;
+		display: inline-block;
+	}
+
+	input, textarea
+	{
+		display: block;
+		width: 100%;
+		margin: 0 auto 2% auto;
+		padding: .7% 0 .7% 1%;
+		border: 2px solid #fff;
+		background: transparent;
+		color: #fff;
+		transition: all ease-in-out .3s;
+	}
+
+	#username
+	{
+		margin: 0 auto 1% auto;
+		padding: .35% 0 .35% .5%;
+	}
+
+	input:focus, textarea:focus
+	{
+		border-color: $primary-color;
+	}
+
+	textarea
+	{
+		color: #fff;
+		height: 55px;
+		resize: none;
+	}
+
+	button
+	{
+		background: transparent;
+		color: #fff;
+		padding: .5%;
+		border: 2px solid $primary-color;
+		transition: all ease-in-out .3s;
+	}
+
+	button:hover
+	{
+		@include hover-button;
+	}
+
+}//container-form
+
+
+@media screen and (max-width: 1445px){
+
+	.container-form
+	{
+
+		.left-form, .right-form
+		{
+			display: block;
+			width: 100%;
+		}
+
+	}
+
+}
+
+//////////////////////////////////////////
