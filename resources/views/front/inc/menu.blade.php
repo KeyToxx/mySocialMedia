@@ -11,7 +11,11 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li><a class="nav-link" href="{{ route('homepage') }}">Accueil</a></li>
-                        <li><a class="nav-link" href="{{ route('settingspage') }}">Paramètres</a></li>
+                        
+                        @auth
+                            <li><a class="nav-link" href="{{ route('profilepage') }}">Mon compte</a></li>
+                        @endauth
+                        
                     </ul>
 
                     <!-- Right Side Of Navbar -->

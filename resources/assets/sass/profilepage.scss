@@ -1,0 +1,53 @@
+$primary-color: #DD5E5C;
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+// html
+// {
+// 	-moz-user-select: -moz-none;
+//     -webkit-user-select: none;
+//     -khtml-user-select: none;
+//     -o-user-select: none;
+//     user-select: none;
+// }
+
+//MIXINS
+
+@mixin dark-overlay
+{
+	&:hover
+	{
+		content: "+";
+		background: rgba(0, 0, 0, 0.75);
+		z-index: 9999;
+		position: absolute;
+	}
+}
+
+@mixin hover-button
+{	
+	&:hover
+	{
+		background: $primary-color;
+		cursor: pointer;
+	}
+}
+
+body
+{
+  	background: #333;
+	color: #fff;
+	font-family: 'Raleway';
+	max-width: 100%;
+	box-sizing: border-box;
+
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

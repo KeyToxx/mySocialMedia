@@ -20,7 +20,9 @@
         
         @include('front.inc.menu')
 
-        @yield('content')
+        <main>
+            @yield('content')
+        </main>
         
     </div>
 

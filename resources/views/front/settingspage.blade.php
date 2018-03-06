@@ -10,8 +10,6 @@
 
 	@auth
 
-		Gérer la modification : Logo, banniere, nom, prenom, pseudonyme, description
-
 		<header>
 			
 			<div class="container-banner">

@@ -16,6 +16,11 @@
 Route::resource('/','HomeController');
 Route::name('homepage')->get('/','HomeController@index');
 
+//PROFILE
+
+Route::resource('profil', 'ProfileController');
+Route::name('profilepage')->get('profil', 'ProfileController@index');
+
 //SETTINGS
 
 Route::resource('parametres','SettingsController');
