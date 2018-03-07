@@ -10,31 +10,31 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li><a class="nav-link" href="{{ route('homepage') }}">Accueil</a></li>
-                        
-                        @auth
-                            <li><a class="nav-link" href="{{ route('profilepage') }}">Mon compte</a></li>
-                        @endauth
-                        
+                        <li><a class="nav-link" href="{{ route('homepage') }}"><i class="fa fa-home" style="font-size: 1.5rem;"></i></a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a class="nav-link connexion" href="{{ route('login') }}">Connexion</a></li>
-                            <li><a class="nav-link inscription" href="{{ route('register') }}">Inscription</a></li>
+                            <li><a class="nav-link connexion" href="{{ route('login') }}"><i class="fa fa-sign-in pr-2"></i>Connexion</a></li>
+                            <li><a class="nav-link inscription" href="{{ route('register') }}"><i class="fa fa-user-plus pr-2"></i>Inscription</a></li>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="/uploads/avatars/{{Auth::user()->avatar}}" alt="avatar" style="width: 27px; height: 27px; border-radius: 50%; position: relative; top: -1px; left: -1px;">
                                     {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                    @auth
+                                        <a href="{{route('profilepage')}}" class="dropdown-item"><i class="fa fa-user pr-2"></i>Mon profil</a>
+                                    @endauth
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        Déconnexion
+                                        <i class="fa fa-sign-out pr-2"></i>Déconnexion
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

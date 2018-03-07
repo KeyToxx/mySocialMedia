@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\User;
 
+use Auth;
+
 class ProfileController extends Controller
 {
     /**
@@ -15,9 +17,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $user = User::all();
-        //dd($user);
-        return view('front.profilepage', compact('user'));
+        $lineuser = User::all();
+        return view('front.profilepage', compact('lineuser'));
     }
 
     /**

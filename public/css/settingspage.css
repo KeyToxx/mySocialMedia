@@ -49,6 +49,25 @@ header .container-logo #logo {
   margin-top: 70px;
   border: 3px solid #000;
   border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  background: #d1d1d1;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+header #form-logo button {
+  background: transparent;
+  color: #fff;
+  padding: .5%;
+  border: 2px solid #DD5E5C;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+}
+
+header #form-logo button:hover:hover {
+  background: #DD5E5C;
+  cursor: pointer;
 }
 
 .container-form {

@@ -25,6 +25,7 @@ Route::name('profilepage')->get('profil', 'ProfileController@index');
 
 Route::resource('parametres','SettingsController');
 Route::name('settingspage')->get('parametres','SettingsController@index');
+Route::post('parametres', 'SettingsController@update_avatar');
 
 //AUTH
 

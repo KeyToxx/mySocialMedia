@@ -24,9 +24,17 @@
 
 			<div class="container-logo">
 
-				<img src="http://via.placeholder.com/250x250" id="logo">
+				<img src="/uploads/avatars/{{ Auth::user()->avatar }}" id="logo">
 	
 			</div>
+
+			<form id="form-logo" enctype="multipart/form-data" action="/parametres" method="POST">
+				
+				<input type="file" name="avatar">
+				<input type="hidden" name="_token" value="{{ csrf_token() }}"><br>
+				<button type="submit">Mettre à jour l'avatar</button>
+
+			</form>
 
 		</header>
 
@@ -42,7 +50,7 @@
 				</ul>
 			@endforeach
 			
-			@foreach($user as $value)
+			@foreach($lineuser as $value)
 
 				@if(Auth::id() == $value->id)
 

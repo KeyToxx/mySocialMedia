@@ -8,19 +8,25 @@
 
 @section('title')
 
-    Mon compte
+    Mon profil
 
 @endsection
 
 @section('content')
 
-	@foreach($user as $value)
+	@foreach($lineuser as $value)
 
 		@if(Auth::id() == $value->id)
+
+		<article>
+
+			<img src="/uploads/avatars/{{ Auth::user()->avatar }}" alt="avatar"><br><br>
 
 			Afficher le profil nom, prenom, pseudo, avatar etc .... <br><br>
 
 			<a href="{{route('settingspage')}}">Paramètres du compte</a><br><br>
+
+		</article>
 
 		@endif
 

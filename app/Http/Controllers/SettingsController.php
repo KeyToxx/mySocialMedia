@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
+
+use Image;
+
 use App\User;
 
 use App\Http\Requests\UserRequest;
@@ -17,8 +21,25 @@ class SettingsController extends Controller
      */
     public function index()
     {
-        $user = User::all();
-        return view('front.settingspage', compact('user'));
+        $lineuser = User::all();
+        return view('front.settingspage', array('user' => Auth::user()), compact('lineuser'));
+    }
+
+    public function update_avatar(Request $request)
+    {
+
+        if ($request->hasfile('avatar')) {
+            $avatar = $request->file('avatar');
+            $filename = time() . '.' . $avatar->getClientOriginalExtension();
+            Image::make($avatar)->resize(200, 200)->save( public_path('uploads/avatars/' . $filename) );
+
+            $user = Auth::user();
+            $user->avatar = $filename;
+            $user->save();
+        }
+
+        return redirect()->route('settingspage')->with('message', 'Vos modifications ont bien été prises en compte !');
+
     }
 
     /**
@@ -73,9 +94,9 @@ class SettingsController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
-        $user = User::find($id);
-        $user->update($request->all());
-        //dd($user);
+        $lineuser = User::find($id);
+        $lineuser->update($request->all());
+
         return redirect()->route('settingspage')->with('message','Vos modifications ont bien été prises en compte !');
     }
 
