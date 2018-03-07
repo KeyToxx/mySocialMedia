@@ -16,6 +16,7 @@ class ProfileController extends Controller
     public function index()
     {
         $user = User::all();
+        //dd($user);
         return view('front.profilepage', compact('user'));
     }
 

@@ -22,9 +22,6 @@
 
 			<a href="{{route('settingspage')}}">Paramètres du compte</a><br><br>
 
-			{{$value->name}}
-			{{$value->firstname}}
-
 		@endif
 
 	@endforeach
