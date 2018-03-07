@@ -6,6 +6,12 @@
 
 @endsection
 
+@section('title')
+
+    Mon compte
+
+@endsection
+
 @section('content')
 
 	@foreach($user as $value)

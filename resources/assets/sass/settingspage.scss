@@ -138,6 +138,11 @@ header
 		border-color: $primary-color;
 	}
 
+	input, textarea
+	{
+		outline: none;
+	}
+
 	textarea
 	{
 		color: #fff;

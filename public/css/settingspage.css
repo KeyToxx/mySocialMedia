@@ -90,6 +90,11 @@ header .container-logo #logo {
   border-color: #DD5E5C;
 }
 
+.container-form input,
+.container-form textarea {
+  outline: none;
+}
+
 .container-form textarea {
   color: #fff;
   height: 55px;

@@ -6,6 +6,12 @@
 
 @endsection
 
+@section('title')
+
+    Paramètres
+
+@endsection
+
 @section('content')
 
 	@auth
@@ -37,8 +43,6 @@
 			@endforeach
 			
 			@foreach($user as $value)
-
-				{{-- @if(Auth::user()->id == $value->id) --}}
 
 				@if(Auth::id() == $value->id)
 

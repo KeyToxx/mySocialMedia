@@ -6,6 +6,12 @@
 
 @endsection
 
+@section('title')
+
+    Accueil
+
+@endsection
+
 @section('content')
 
 	contenu
