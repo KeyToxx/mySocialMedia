@@ -22,8 +22,8 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="/uploads/avatars/{{Auth::user()->avatar}}" alt="avatar" style="width: 27px; height: 27px; border-radius: 50%; position: relative; top: -1px; left: -1px;">
-                                    {{ Auth::user()->username }} <span class="caret"></span>
+                                    <img id="avatar" src="/uploads/avatars/{{Auth::user()->avatar}}" alt="avatar">
+                                    <span id="username">{{ Auth::user()->username }}</span> <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -31,6 +31,7 @@
                                     @auth
                                         <a href="{{route('profilepage')}}" class="dropdown-item"><i class="fa fa-user pr-2"></i>Mon profil</a>
                                     @endauth
+                                    
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

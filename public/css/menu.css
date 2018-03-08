@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);nav.navbar {
+  background: #272b36;
+  border-bottom: 3px solid #FF5C41;
+}
+
+nav.navbar .navbar-brand {
+  color: #fff;
+}
+
+nav.navbar .navbar-brand:hover {
+  color: #fff;
+}
+
+nav.navbar .navbar-nav li i {
+  color: #fff;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+}
+
+nav.navbar .navbar-nav li i:hover:hover {
+  color: #DD5E5C;
+  cursor: pointer;
+}
+
+nav.navbar .navbar-nav #username {
+  color: #fff;
+}
+
+nav.navbar .navbar-nav .caret {
+  color: #fff !important;
+}
+
+nav.navbar .navbar-nav .dropdown-menu .dropdown-item i {
+  color: #000;
+}
+
+#avatar {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  position: relative;
+  top: -1px;
+  left: -1px;
+}
+

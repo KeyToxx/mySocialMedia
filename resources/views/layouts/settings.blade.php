@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/menu.css')}}">
     <script src="https://use.fontawesome.com/ac27f63fe1.js"></script>
     @yield('head')
 </head>
