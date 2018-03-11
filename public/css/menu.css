@@ -11,8 +11,11 @@ nav.navbar .navbar-brand:hover {
   color: #fff;
 }
 
+nav.navbar .navbar-nav li a {
+  color: #fff !important;
+}
+
 nav.navbar .navbar-nav li i {
-  color: #fff;
   -webkit-transition: all ease-in-out .3s;
   transition: all ease-in-out .3s;
 }
@@ -22,16 +25,8 @@ nav.navbar .navbar-nav li i:hover:hover {
   cursor: pointer;
 }
 
-nav.navbar .navbar-nav #username {
-  color: #fff;
-}
-
-nav.navbar .navbar-nav .caret {
-  color: #fff !important;
-}
-
-nav.navbar .navbar-nav .dropdown-menu .dropdown-item i {
-  color: #000;
+nav.navbar .dropdown-menu .dropdown-item {
+  color: #000 !important;
 }
 
 #avatar {

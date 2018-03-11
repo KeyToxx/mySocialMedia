@@ -22,7 +22,13 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img id="avatar" src="/uploads/avatars/{{Auth::user()->avatar}}" alt="avatar">
+
+                                    @if(Auth::user()->avatar == NULL)
+                                        <img id="avatar" src="/uploads/avatars/default.png" alt="avatar" style="background: #d1d1d1;">
+                                        @else
+                                            <img id="avatar" src="/uploads/avatars/{{Auth::user()->avatar}}" alt="avatar">
+                                    @endif
+
                                     <span id="username">{{ Auth::user()->username }}</span> <span class="caret"></span>
                                 </a>
 

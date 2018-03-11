@@ -16,28 +16,6 @@
 
 	@auth
 
-		<header>
-			
-			<div class="container-banner">
-				<img src="http://via.placeholder.com/1920x200" id="banner">
-			</div>
-
-			<div class="container-logo">
-
-				<img src="/uploads/avatars/{{ Auth::user()->avatar }}" id="logo">
-	
-			</div>
-
-			<form id="form-logo" enctype="multipart/form-data" action="/parametres" method="POST">
-				
-				<input type="file" name="avatar">
-				<input type="hidden" name="_token" value="{{ csrf_token() }}"><br>
-				<button type="submit">Mettre à jour l'avatar</button>
-
-			</form>
-
-		</header>
-
 		<article class="container-form">
 
 			@if(Session::has('message'))
@@ -69,9 +47,27 @@
 					{!! Form::text('username', null, ['id' => 'username', 'placeholder' => 'Pseudonyme *']) !!}
 
 					{!! Form::textarea('description', null, ['id' => 'description', 'placeholder' => 'Description']) !!}
+
 					{!! Form::button('Enregistrez les modifications !', array('type' => 'submit')) !!}
 
 				{!! Form::close() !!}
+
+                <div class="container-logo">
+                    <label for="file-input">
+                        @if(Auth::user()->avatar == NULL)
+                            <img class="mt-5" src="/uploads/avatars/default.png" id="logo" title="Cliquez ici pour changez d'avatar !">
+                        @else
+                            <img class="mt-5" src="/uploads/avatars/{{ Auth::user()->avatar }}" id="logo" title="Cliquez ici pour changez d'avatar !">
+                        @endif
+                    </label>
+                    <form id="form-logo" enctype="multipart/form-data" action="/parametres" method="POST">
+
+                        <input id="file-input" type="file" name="avatar">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}"><br>
+                        <button type="submit">Mettre à jour l'avatar</button>
+
+                    </form>
+                </div>
 
 				@endif
 

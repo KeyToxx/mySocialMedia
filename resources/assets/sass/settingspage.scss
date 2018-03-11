@@ -52,13 +52,10 @@ body
   justify-content: center;
 }
 
-img#banner
-{
+img#banner {
 	height: 200px;
 	max-width: 100%;
 }
-
-// Banner and Logo
 
 header
 {
@@ -66,54 +63,12 @@ header
 	background: #fff;
 	height: 200px;
 
-	.container-banner, .container-logo
+	.container-logo
 	{
 		position: relative;
 	}
 
-	#banner
-	{
-		position: absolute;
-		left: 0;
-	}
 	
-	.container-logo
-	{
-		
-		#logo
-		{
-			position: static;
-			margin-top: 70px;
-			border: 3px solid #000;
-			border-radius: 50%;
-			width: 200px;
-			height: 200px;
-			background: #d1d1d1;
-			max-width: 200px;
-			max-height: 200px;
-		}
-
-	}
-
-	#form-logo
-	{
-
-		button
-		{
-			background: transparent;
-			color: #fff;
-			padding: .5%;
-			border: 2px solid $primary-color;
-			transition: all ease-in-out .3s;
-		}
-
-		button:hover
-		{
-			@include hover-button;
-		}
-	}
-
-
 }//header
 
 ////////////////////////////////////////
@@ -171,6 +126,50 @@ header
 		color: #fff;
 		height: 55px;
 		resize: none;
+	}
+
+	.container-logo
+	{
+		#logo
+		{
+			position: relative;
+			border: 3px solid #000;
+			//border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			background: #d1d1d1;
+			max-width: 100px;
+			max-height: 100px;
+		}
+
+		#logo:hover
+		{
+			cursor: pointer;
+		}
+
+		#file-input
+		{
+			display: none;
+		}
+
+	}
+
+	#form-logo
+	{
+
+		button
+		{
+			background: transparent;
+			color: #fff;
+			padding: .5%;
+			border: 2px solid $primary-color;
+			transition: all ease-in-out .3s;
+		}
+
+		button:hover
+		{
+			@include hover-button;
+		}
 	}
 
 	button

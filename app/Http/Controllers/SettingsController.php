@@ -36,12 +36,13 @@ class SettingsController extends Controller
         if ($request->hasfile('avatar')) {
             $avatar = $request->file('avatar');
             $filename = time() . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(200, 200)->save( public_path('uploads/avatars/' . $filename) );
+            Image::make($avatar)->resize(200, 200)->save(public_path('uploads/avatars/' . $filename));
 
             $user = Auth::user();
             $user->avatar = $filename;
             $user->save();
         }
+
 
         return redirect()->route('settingspage')->with('message', 'Vos modifications ont bien été prises en compte !');
 

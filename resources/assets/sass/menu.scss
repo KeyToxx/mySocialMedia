@@ -61,9 +61,13 @@ nav.navbar
 	{
 		li
 		{
+			a
+			{
+				color: #fff !important;
+			}
+
 			i
 			{
-				color: #fff;
 				transition: all ease-in-out .3s;
 			}
 
@@ -73,25 +77,13 @@ nav.navbar
 			}
 		}
 
-		#username
-		{
-			color: #fff;
-		}
+	}
 
-		.caret
+	.dropdown-menu
+	{
+		.dropdown-item
 		{
-			color: #fff !important;
-		}
-
-		.dropdown-menu
-		{
-			.dropdown-item
-			{
-				i
-				{
-					color: #000;
-				}
-			}
+			color: #000 !important;
 		}
 	}
 

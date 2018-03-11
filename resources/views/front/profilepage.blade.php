@@ -18,15 +18,35 @@
 
 		@if(Auth::id() == $value->id)
 
-		<article>
+			<div class="vertical-center">
+				<article id="card">
 
-			<img src="/uploads/avatars/{{ Auth::user()->avatar }}" alt="avatar"><br><br>
+					<div id="image-container">
 
-			Afficher le profil nom, prenom, pseudo, avatar etc .... <br><br>
+						@if (Auth::user()->avatar == NULL)
 
-			<a href="{{route('settingspage')}}">Paramètres du compte</a><br><br>
+							<img src="/uploads/avatars/default.png" id="logo" style="background: #d1d1d1;">
 
-		</article>
+							@else
+
+								<img src="/uploads/avatars/{{ Auth::user()->avatar }}" id="logo">
+
+						@endif
+
+						<a href="{{route('settingspage')}}">Paramètres du compte</a>
+
+					</div>
+
+					<div id="news">
+						<h1>{{Auth::user()->name}} {{Auth::user()->firstname}}</h1>
+						<p><span>NOM : </span>{{Auth::user()->name}}</p>
+						<p><span>PRENOM : </span>{{Auth::user()->firstname}}</p>
+						<p><span>PSEUDO : </span>{{Auth::user()->username}}</p>
+						<p><span>DESCRIPTION : </span>{{Auth::user()->description}}</p>
+					</div>
+
+				</article>
+			</div>
 
 		@endif
 
