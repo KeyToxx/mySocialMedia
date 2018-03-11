@@ -17,12 +17,21 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <div id="search-container">
-                                <input id="search" type="text" placeholder="Recherche..."><button type="submit"><i class="fa fa-search"></i></button>
-                            </div>
+                            <form action="{{route('search.index')}}" method="get">
+                                <div id="search-container">
+                                    <input id="search" type="text" placeholder="Recherche..." name="s" value="{{ isset($s) ? $s : '' }}">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
                             <li><a class="nav-link connexion" href="{{ route('login') }}"><i class="fa fa-sign-in pr-2"></i>Connexion</a></li>
                             <li><a class="nav-link inscription" href="{{ route('register') }}"><i class="fa fa-user-plus pr-2"></i>Inscription</a></li>
                         @else
+                            <form action="{{route('search.index')}}" method="get">
+                                <div id="search-container">
+                                    <input id="search" type="text" placeholder="Recherche..." name="s" value="{{ isset($s) ? $s : '' }}">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </form>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 

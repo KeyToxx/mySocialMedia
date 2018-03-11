@@ -27,6 +27,9 @@ Route::resource('parametres','SettingsController');
 Route::name('settingspage')->get('parametres','SettingsController@index');
 Route::post('parametres', 'SettingsController@update_avatar');
 
+//SEARCH
+Route::resource('search','SearchController');
+
 //AUTH
 
 Auth::routes();

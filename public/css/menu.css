@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);nav.navbar {
+@import url(https://fonts.googleapis.com/css?family=Raleway);@import url(https://fonts.googleapis.com/css?family=Roboto);nav.navbar {
   background: #272b36;
   border-bottom: 3px solid #FF5C41;
 }
@@ -12,7 +12,7 @@ nav.navbar .navbar-brand:hover {
 }
 
 nav.navbar .navbar-nav #search-container {
-  width: 200px;
+  width: 210px;
   padding-top: 4px;
 }
 

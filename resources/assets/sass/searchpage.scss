@@ -1,0 +1,91 @@
+$primary-color: #DD5E5C;
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+// html
+// {
+// 	-moz-user-select: -moz-none;
+//     -webkit-user-select: none;
+//     -khtml-user-select: none;
+//     -o-user-select: none;
+//     user-select: none;
+// }
+
+//MIXINS
+
+@mixin dark-overlay
+{
+  &:hover
+  {
+    content: "+";
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 9999;
+    position: absolute;
+  }
+}
+
+@mixin hover-link
+{
+  &:hover
+  {
+    color: $primary-color;
+    cursor: pointer;
+  }
+}
+
+@mixin hover-button
+{
+  &:hover
+  {
+    background: $primary-color;
+    cursor: pointer;
+  }
+}
+
+body
+{
+  background: #333;
+  color: #fff;
+}
+.list-container
+{
+  .item
+  {
+    padding: .3% 5%;
+    background: #fff;
+    vertical-align: middle;
+
+    ul
+    {
+
+      li
+      {
+        list-style-type: none;
+
+        img
+        {
+          width: 60px;
+        }
+
+        .value
+        {
+          width: calc(95% / 2);
+          display: inline-block;
+
+          span
+          {
+            display: block;
+            text-align: center;
+            color: #000;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}//list-container
