@@ -30,6 +30,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{asset('js/menu.js')}}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     @yield('js')

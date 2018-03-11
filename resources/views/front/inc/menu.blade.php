@@ -17,6 +17,9 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+                            <div id="search-container">
+                                <input id="search" type="text" placeholder="Recherche..."><button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
                             <li><a class="nav-link connexion" href="{{ route('login') }}"><i class="fa fa-sign-in pr-2"></i>Connexion</a></li>
                             <li><a class="nav-link inscription" href="{{ route('register') }}"><i class="fa fa-user-plus pr-2"></i>Inscription</a></li>
                         @else

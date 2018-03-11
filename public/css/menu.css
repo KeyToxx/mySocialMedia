@@ -11,6 +11,37 @@ nav.navbar .navbar-brand:hover {
   color: #fff;
 }
 
+nav.navbar .navbar-nav #search-container {
+  width: 200px;
+  padding-top: 4px;
+}
+
+nav.navbar .navbar-nav #search-container #search {
+  font-size: 0.9rem;
+  padding: 1%;
+  outline: none;
+  -webkit-transition: all ease-in-out .3s;
+  transition: all ease-in-out .3s;
+}
+
+nav.navbar .navbar-nav #search-container #search:focus {
+  border: 2px solid #DD5E5C;
+}
+
+nav.navbar .navbar-nav #search-container button[type='submit'] {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+nav.navbar .navbar-nav #search-container button[type='submit'] i {
+  color: #fff;
+}
+
+nav.navbar .navbar-nav #search-container button[type='submit']:hover {
+  cursor: pointer;
+}
+
 nav.navbar .navbar-nav li a {
   color: #fff !important;
 }

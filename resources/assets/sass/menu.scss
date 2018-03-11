@@ -59,6 +59,43 @@ nav.navbar
 
 	.navbar-nav
 	{
+		#search-container
+		{
+			width: 200px;
+			padding-top: 4px;
+
+			#search
+			{
+				font-size: 0.9rem;
+				padding: 1%;
+				outline: none;
+				transition: all ease-in-out .3s;
+			}
+
+			#search:focus
+			{
+				border: 2px solid $primary-color;
+			}
+
+			button[type='submit']
+			{
+				background: transparent;
+				border: none;
+				outline: none;
+
+				i
+				{
+					color: #fff;
+				}
+			}
+
+			button[type='submit']:hover
+			{
+				cursor: pointer;
+			}
+
+		}
+
 		li
 		{
 			a
